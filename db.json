@@ -1,0 +1,28 @@
+{
+  "alunos": [
+    {
+      "id": 6,
+      "nome": "lis do pix",
+      "email": "lisapix@gmail.com",
+      "cpf": "234.765.879-09",
+      "telefone": "(61) 994346162",
+      "curso": "Engenharia de software"
+    },
+    {
+      "id": 7,
+      "nome": "lana del rey",
+      "email": "lanadel@gmail.com",
+      "cpf": "124.987.567.87",
+      "telefone": "(61) 997642802",
+      "curso": "Ciencia da computação"
+    },
+    {
+      "id": 8,
+      "nome": "Lucas neto",
+      "email": "joao@gmail.com",
+      "cpf": "088.077.875-90",
+      "telefone": "(11) 4337839573",
+      "curso": "Engenharia de software"
+    }
+  ]
+}

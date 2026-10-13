@@ -1,0 +1,959 @@
+
+/* ==========================================================
+   🎀 PAINEL DE ALUNOS — COQUETTE VINTAGE DREAM
+   Pink scrapbook • Rococó • Y2K • Bows & Pearls
+   ========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+
+/* ==================== 01. PALETA ==================== */
+
+:root {
+    --primary--color: #d94f89;
+
+    --pink-50: #fff0f6;
+    --pink-100: #ffe0ed;
+    --pink-200: #ffc4dc;
+    --pink-300: #ffa3ca;
+    --pink-400: #f77eb1;
+    --pink-500: #ed639d;
+    --pink-600: #d94f89;
+    --pink-700: #b83c70;
+    --pink-800: #913056;
+
+    --rosewood: #73394f;
+    --rose-text: #673449;
+    --cream-pink: #fff5f8;
+    --gold: #c49a50;
+    --gold-light: #f4dda4;
+    --border-pink: #efa8c5;
+
+    --shadow-pink:
+        0 12px 35px rgba(204, 83, 134, 0.16);
+
+    --shadow-deep:
+        0 18px 45px rgba(177, 59, 111, 0.20);
+
+    --font-title: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'DM Sans', sans-serif;
+}
+
+/* ==================== 02. RESET ==================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 35px 22px;
+
+    color: var(--rose-text);
+    font-family: var(--font-body);
+
+    background-color: #ffdce9;
+
+    background-image:
+        radial-gradient(
+            circle,
+            rgba(181, 54, 105, 0.75) 1.7px,
+            transparent 2px
+        ),
+        radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.7) 3px,
+            transparent 4px
+        ),
+        linear-gradient(
+            135deg,
+            #ffc9de 0%,
+            #ffe1ed 45%,
+            #f8b9d3 100%
+        );
+
+    background-size:
+        26px 26px,
+        79px 79px,
+        100% 100%;
+
+    background-attachment: fixed;
+}
+
+/* Seleção de texto */
+
+::selection {
+    color: #fff;
+    background: #cf4c83;
+}
+
+/* ==================== 03. SCRAPBOOK PRINCIPAL ==================== */
+
+.container {
+    position: relative;
+    isolation: isolate;
+
+    width: min(1250px, 100%);
+    margin: 0 auto;
+    padding: 32px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 232, 242, 0.98),
+            rgba(255, 215, 232, 0.98)
+        );
+
+    border: 2px solid #f4a7c5;
+    outline: 1px dashed #d975a0;
+    outline-offset: 6px;
+
+    box-shadow:
+        0 0 0 9px rgba(255, 239, 246, 0.65),
+        0 0 0 11px rgba(216, 103, 153, 0.24),
+        0 25px 65px rgba(161, 48, 96, 0.22);
+
+    overflow: hidden;
+}
+
+/* Textura decorativa interna */
+
+.container::after {
+    content: "✧  ♡  ୨୧  ♡  ✧";
+
+    display: block;
+    margin-top: 27px;
+    padding-top: 18px;
+
+    color: #c75b88;
+    border-top: 1px dashed #df91b1;
+
+    font-family: var(--font-title);
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 8px;
+}
+
+/* Faixa decorativa do scrapbook */
+
+.container::before {
+    content: "୨୧  THE PINK DIARY CLUB  ୨୧";
+
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto 28px;
+    padding: 12px 25px;
+
+    color: #a93e6d;
+
+    background:
+        repeating-linear-gradient(
+            -45deg,
+            #ffd5e5 0px,
+            #ffd5e5 8px,
+            #ffe5ef 8px,
+            #ffe5ef 16px
+        );
+
+    border: 1px solid #e999b8;
+    outline: 2px solid #ffeaf2;
+    outline-offset: -5px;
+
+    box-shadow: 3px 4px 0 #e8a0bd;
+
+    font-family: var(--font-title);
+    font-size: 15px;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/* ==================== 04. CABEÇALHO ==================== */
+
+header {
+    position: relative;
+
+    margin-bottom: 35px;
+    padding: 48px 25px 35px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle,
+            #d8759d 1.6px,
+            transparent 2px
+        ),
+        linear-gradient(
+            135deg,
+            #f7b4ce,
+            #ffdce9 45%,
+            #f9b4ce
+        );
+
+    background-size: 21px 21px, 100% 100%;
+
+    border: 2px solid #e88eb1;
+    outline: 1px dashed #c95a8a;
+    outline-offset: -9px;
+
+    box-shadow:
+        0 8px 0 #f4bfd5,
+        0 13px 25px rgba(177, 59, 111, 0.13);
+}
+
+/* Laços decorativos */
+
+header::before {
+    content: "🎀";
+
+    position: absolute;
+    top: 8px;
+    left: 18px;
+
+    font-size: 35px;
+
+    transform: rotate(-12deg);
+    filter: drop-shadow(2px 3px 2px #bd648855);
+}
+
+header::after {
+    content: "♡  ✧";
+
+    position: absolute;
+    top: 14px;
+    right: 19px;
+
+    color: #b84b79;
+    font-size: 28px;
+    letter-spacing: 5px;
+}
+
+/* Título principal */
+
+h1 {
+    margin: 0;
+
+    color: #b83c70;
+
+    font-family: var(--font-title);
+    font-size: clamp(2.7rem, 6vw, 4.7rem);
+    font-weight: 700;
+    font-style: italic;
+
+    letter-spacing: -1px;
+    line-height: 1.05;
+
+    text-shadow:
+        2px 2px 0 #fff0f6,
+        4px 5px 0 rgba(215, 100, 151, 0.24);
+}
+
+h1::after {
+    content: " ♡";
+
+    color: #c38d43;
+    font-size: 0.65em;
+}
+
+/* Botão de PDF */
+
+header button {
+    margin-top: 25px !important;
+    padding: 13px 25px !important;
+
+    color: #fff !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e9689e,
+            #ce477f
+        ) !important;
+
+    border: 2px solid #fff0f6 !important;
+    outline: 1px solid #cb5487;
+    border-radius: 30px !important;
+
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+
+    box-shadow:
+        0 5px 0 #b83c70,
+        0 9px 18px rgba(167, 48, 96, 0.18);
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+header button:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 8px 0 #b83c70,
+        0 12px 20px rgba(167, 48, 96, 0.2);
+}
+
+/* ==================== 05. LAYOUT ==================== */
+
+main {
+    display: grid;
+
+    grid-template-columns:
+        minmax(270px, 0.78fr)
+        minmax(0, 1.55fr);
+
+    gap: 27px;
+    align-items: start;
+}
+
+.form-section,
+.list-section {
+    position: relative;
+    min-width: 0;
+    padding: 26px;
+
+    background:
+        linear-gradient(
+            160deg,
+            #ffe7f0,
+            #ffd7e7 55%,
+            #ffe8f1
+        );
+
+    border: 1px solid #ed9fbd;
+    border-radius: 7px;
+
+    box-shadow:
+        0 0 0 5px rgba(255, 240, 247, 0.8),
+        0 0 0 6px #efbad0,
+        var(--shadow-pink);
+}
+
+/* Cantinhos rococó */
+
+.form-section::before,
+.list-section::before {
+    content: "୨୧  ♡  ୨୧";
+
+    display: block;
+    margin-bottom: 15px;
+
+    color: #c65382;
+    font-family: var(--font-title);
+    font-size: 22px;
+    font-weight: 700;
+
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+/* ==================== 06. TÍTULOS DAS SEÇÕES ==================== */
+
+h2 {
+    margin: 0 0 24px;
+    padding: 0 0 15px;
+
+    color: #b83c70;
+
+    font-family: var(--font-title);
+    font-size: 2rem;
+    font-weight: 700;
+    font-style: italic;
+
+    border-bottom: 2px dashed #dd83a7;
+    text-align: center;
+}
+
+h2::after {
+    content: " 🎀";
+
+    font-family: var(--font-body);
+    font-size: 15px;
+}
+
+/* ==================== 07. FORMULÁRIO ==================== */
+
+#aluno-Form {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    color: #a13f6b;
+
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.input-group label::before {
+    content: "♡ ";
+
+    color: #d65b91;
+    font-size: 14px;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    min-height: 47px;
+    padding: 12px 14px;
+
+    color: #783d56;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff4f8,
+            #ffe4ee
+        );
+
+    border: 1px solid #e99dbb;
+    border-radius: 7px;
+
+    outline: none;
+
+    font-family: var(--font-body);
+    font-size: 13px;
+
+    box-shadow:
+        inset 0 2px 4px rgba(198, 89, 137, 0.06),
+        2px 3px 0 rgba(228, 143, 176, 0.2);
+
+    transition:
+        border-color 0.25s,
+        box-shadow 0.25s,
+        background 0.25s;
+}
+
+.input-group input::placeholder {
+    color: #c78ba5;
+    font-style: italic;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    background: #fff7fb;
+    border-color: #cb4f85;
+
+    box-shadow:
+        0 0 0 4px #f7c3d9,
+        0 4px 12px rgba(198, 79, 133, 0.12);
+}
+
+.input-group select {
+    cursor: pointer;
+}
+
+/* ==================== 08. BOTÕES DO FORMULÁRIO ==================== */
+
+.farm-action {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.farm-action button,
+.btn-icon {
+    padding: 12px 16px;
+
+    border: 1px solid transparent;
+    border-radius: 30px;
+
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+.btn-save {
+    flex: 1;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f58bb7,
+            #d94f89 65%,
+            #c33d77
+        );
+
+    border: 2px solid #f8bcd4;
+
+    box-shadow:
+        0 4px 0 #b83c70,
+        0 7px 15px #c34c8428;
+}
+
+.btn-save::before {
+    content: "♡ ";
+}
+
+.btn-save:hover {
+    filter: saturate(1.15);
+
+    box-shadow:
+        0 6px 0 #b83c70,
+        0 10px 18px #c34c8435;
+}
+
+.btn-cancel {
+    color: #b83c70;
+
+    background: #ffeaf2;
+    border-color: #e8a0bd !important;
+
+    box-shadow: 0 3px 0 #edc0d2;
+}
+
+.btn-cancel::before {
+    content: "↶ ";
+}
+
+/* ==================== 09. ÁREA DA TABELA ==================== */
+
+.table-container {
+    width: 100%;
+
+    overflow-x: auto;
+
+    background: #ffdce9;
+    border: 2px solid #e99fbc;
+    border-radius: 8px;
+
+    box-shadow:
+        inset 0 0 0 4px #ffeaf2,
+        0 5px 14px rgba(198, 79, 133, 0.1);
+}
+
+table {
+    width: 100%;
+    min-width: 760px;
+
+    border-collapse: separate;
+    border-spacing: 0;
+
+    background: #ffeaf2;
+
+    font-family: var(--font-body);
+    font-size: 12px;
+}
+
+/* Cabeçalho da tabela */
+
+thead {
+    color: #fff7fb;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d9558b,
+            #ed80ab 55%,
+            #d9558b
+        );
+}
+
+th {
+    padding: 16px 13px;
+
+    color: #fff7fb;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.23);
+    border-bottom: 2px solid #c74d80;
+
+    font-family: var(--font-title);
+    font-size: 17px;
+    font-weight: 700;
+    font-style: italic;
+
+    text-align: left;
+    white-space: nowrap;
+}
+
+th:last-child {
+    border-right: none;
+}
+
+/* Células */
+
+td {
+    padding: 14px 12px;
+
+    color: #783d56;
+
+    border-right: 1px solid #f5c7d9;
+    border-bottom: 1px solid #f0b7ce;
+
+    vertical-align: middle;
+}
+
+td:last-child {
+    border-right: none;
+}
+
+/* Listras rosa */
+
+tbody tr:nth-child(odd) {
+    background: #ffeaf2;
+}
+
+tbody tr:nth-child(even) {
+    background: #ffd7e7;
+}
+
+/* Efeito ao passar o mouse */
+
+tbody tr {
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+tbody tr:hover {
+    background: #ffc1d9;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Mensagem sem alunos */
+
+td[colspan="7"] {
+    padding: 30px 15px;
+
+    color: #b84e7c;
+
+    background: #ffe4ef;
+
+    font-family: var(--font-title);
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+}
+
+td[colspan="7"]::first-letter {
+    color: #d94f89;
+}
+
+/* ==================== 10. BOTÕES DA TABELA ==================== */
+
+.actions {
+    white-space: nowrap;
+}
+
+.btn-icon {
+    margin: 3px;
+    padding: 9px 12px;
+
+    font-size: 11px;
+}
+
+.btn-edit {
+    color: #a13f6b;
+
+    background: #ffe7f0;
+    border-color: #e99fbc;
+
+    box-shadow: 0 3px 0 #efbad0;
+}
+
+.btn-edit::before {
+    content: "✎ ";
+}
+
+.btn-delete {
+    color: #fff;
+
+    background: linear-gradient(
+        135deg,
+        #ed82aa,
+        #c9447b
+    );
+
+    border-color: #d65b91;
+
+    box-shadow: 0 3px 0 #a83266;
+}
+
+.btn-delete::before {
+    content: "♡ ";
+}
+
+.btn-icon:hover {
+    transform: translateY(-2px);
+    filter: saturate(1.15);
+}
+
+.btn-edit:hover {
+    background: #ffd0e2;
+}
+
+.btn-delete:hover {
+    background: #c83e77;
+}
+
+/* ==================== 11. DETALHES DECORATIVOS ==================== */
+
+input,
+select,
+button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 2px dashed #c94f80;
+    outline-offset: 3px;
+}
+
+a {
+    color: #c94f80;
+}
+
+::placeholder {
+    opacity: 1;
+}
+
+/* ==================== 12. ANIMAÇÕES SUAVES ==================== */
+
+@keyframes pink-glow {
+    0%, 100% {
+        box-shadow: 0 0 0 4px #f8d0e0;
+    }
+
+    50% {
+        box-shadow: 0 0 0 6px #f3b6d0;
+    }
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    animation: pink-glow 1.5s ease-in-out infinite;
+}
+
+/* ==================== 13. RESPONSIVIDADE ==================== */
+
+@media (max-width: 1000px) {
+    .container {
+        padding: 24px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .form-section,
+    .list-section {
+        padding: 23px;
+    }
+
+    table {
+        min-width: 760px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 16px 10px;
+
+        background-size:
+            21px 21px,
+            63px 63px,
+            100% 100%;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .container::before {
+        padding: 10px 12px;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    header {
+        padding: 43px 13px 28px;
+    }
+
+    header::before {
+        left: 10px;
+        font-size: 27px;
+    }
+
+    header::after {
+        right: 10px;
+        font-size: 22px;
+    }
+
+    h1 {
+        font-size: 2.7rem;
+    }
+
+    .form-section,
+    .list-section {
+        padding: 18px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .farm-action {
+        flex-direction: column;
+    }
+
+    .farm-action button {
+        width: 100%;
+    }
+
+    .container::after {
+        font-size: 16px;
+        letter-spacing: 4px;
+    }
+}
+
+@media (max-width: 380px) {
+    .container {
+        padding: 10px;
+    }
+
+    .form-section,
+    .list-section {
+        padding: 13px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .container::before {
+        font-size: 10px;
+    }
+}
+
+/* ==================== 14. IMPRESSÃO / PDF ==================== */
+
+@media print {
+    @page {
+        size: A4 landscape;
+        margin: 12mm;
+    }
+
+    body {
+        padding: 0;
+        background: white !important;
+
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .container {
+        width: 100%;
+        max-width: none;
+        padding: 0;
+
+        background: white;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        overflow: visible;
+    }
+
+    .container::before,
+    .container::after {
+        display: none;
+    }
+
+    header {
+        padding: 15px;
+        margin-bottom: 18px;
+
+        background: #ffe0ed !important;
+        box-shadow: none;
+        outline: none;
+    }
+
+    header button,
+    .form-section,
+    .actions,
+    th:last-child,
+    td:last-child {
+        display: none !important;
+    }
+
+    main {
+        display: block;
+    }
+
+    .list-section {
+        padding: 10px;
+
+        background: white;
+        border: 1px solid #e99fbc;
+        box-shadow: none;
+    }
+
+    .list-section::before {
+        display: none;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .table-container {
+        overflow: visible;
+        box-shadow: none;
+    }
+
+    table {
+        width: 100%;
+        min-width: 0;
+        font-size: 10px;
+    }
+
+    th {
+        padding: 8px 6px;
+        font-size: 12px;
+        background: #f5bfd4 !important;
+        color: #783d56 !important;
+    }
+
+    td {
+        padding: 7px 6px;
+    }
+}
